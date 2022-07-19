@@ -17,13 +17,17 @@ const LinkedList = () => {
     };
     
     const append = (data) => {
-        let tail = Node(data);
+        let node = Node(data);
         let currNode = head;
-        while (currNode) {
-            currNode = currNode.next;
-            if (currNode.next === null) {
-                currNode.next = tail;
-                break;
+        if (head === null) {
+            head = node;
+        } else {
+            while (currNode) {
+                currNode = currNode.next;
+                if (currNode.next === null) {
+                    currNode.next = node;
+                    break;
+                }
             }
         }
     }
