@@ -1,5 +1,5 @@
-var array = [3, 6, 2, 1, 5, 4]
-var sortedArray = [-7, -5, -4, -3, -2, 0, 1, 2, 3, 4, 5, 6]
+// var array = [3, 6, 2, 1, 5, 4]
+// var sortedArray = [-7, -5, -4, -3, -2, 0, 1, 2, 3, 4, 5, 6]
 
 // function bubbleSort(arr) {
 //     for (let i = 0; i < arr.length; i++) {
@@ -36,8 +36,8 @@ var sortedArray = [-7, -5, -4, -3, -2, 0, 1, 2, 3, 4, 5, 6]
 
 
 //RECURSIVE
-function binarySearch(array, x, start = 0, end = array.length - 1) {
-    let mid = Math.floor((start + end)/2);
+// function binarySearch(array, x, start = 0, end = array.length - 1) {
+    // let mid = Math.floor((start + end)/2);
     //NONRECURSIVE WAY
     // while (start <= end) {
     //     let mid = Math.floor((start + end)/2);
@@ -51,20 +51,38 @@ function binarySearch(array, x, start = 0, end = array.length - 1) {
     // }
 
     //RECURSIVE WAY
-    if ((array.length === 1 && array[0] != x) || start > end) {
-        return false;
-    }
+//     if ((array.length === 1 && array[0] != x) || start > end) {
+//         return false;
+//     }
 
-    if (array[mid] === x) {
-        return mid;
-    } else if (array[mid] < x) {
-        start = mid + 1;
-        return binarySearch(array, x, start, end);
+//     if (array[mid] === x) {
+//         return mid;
+//     } else if (array[mid] < x) {
+//         start = mid + 1;
+//         return binarySearch(array, x, start, end);
+//     } else {
+//         end = mid - 1;
+//         return binarySearch(array, x, start, end);
+//     }
+
+// }
+
+// console.log(binarySearch(sortedArray, -3));
+
+const prevFib = [];
+
+const fib = (n) => {
+    if (prevFib[n] != null) {
+        return prevFib[n];
+    }
+    let result = 0;
+    if (n <= 1) {
+        result = 1;
     } else {
-        end = mid - 1;
-        return binarySearch(array, x, start, end);
+        result = (fib(n - 1) + fib(n - 2));
     }
-
+    prevFib[n] = result;
+    return result;
 }
 
-console.log(binarySearch(sortedArray, -3));
+console.log(fib(5));
