@@ -69,20 +69,83 @@
 
 // console.log(binarySearch(sortedArray, -3));
 
-const prevFib = [];
+// const prevFib = [];
 
-const fib = (n) => {
-    if (prevFib[n] != null) {
-        return prevFib[n];
-    }
-    let result = 0;
-    if (n <= 1) {
-        result = 1;
-    } else {
-        result = (fib(n - 1) + fib(n - 2));
-    }
-    prevFib[n] = result;
-    return result;
-}
+// const fib = (n) => {
+//     if (prevFib[n] != null) {
+//         return prevFib[n];
+//     }
+//     let result = 0;
+//     if (n <= 1) {
+//         result = 1;
+//     } else {
+//         result = (fib(n - 1) + fib(n - 2));
+//     }
+//     prevFib[n] = result;
+//     return result;
+// }
 
-console.log(fib(5));
+// console.log(fib(5));
+
+// LENGTH OF LONGEST SUBSTRING BRO
+// var lengthOfLongestSubstring = function(s) {
+//     // let letters = {};
+//     let currentLongest = '';
+//     let previousLongest = '';
+//     for (let i = 0; i < s.length; i++) {
+//         let current = s[i];
+//         console.log(currentLongest);
+//         if (currentLongest.indexOf(current) === -1) {
+//             currentLongest += current;
+//             // console.log(currentLongest)
+//             if (currentLongest.length > previousLongest.length) {
+//                 previousLongest = currentLongest
+//             }
+//         } else {
+//             currentLongest = currentLongest.slice(currentLongest.indexOf(current) + 1) + current;
+//         }
+//     }
+//     if (currentLongest.length > previousLongest.length) {
+//         return currentLongest.length;
+//     } else {
+//         return previousLongest.length;
+//     }
+// };
+
+
+// console.log(lengthOfLongestSubstring('dvdf'));
+
+var intToRoman = function(num) {
+    const one = "I";
+    const five = "V";
+    const ten = "X";
+    const fifty = "L";
+    const hundred = "C";
+    const fiveHundred = "D";
+    const thousand = "M";
+    
+    let obj = {};
+    
+    let array = num.toString().split('');
+    let digitsArray = array.map(num => Number(num));
+
+    let result = ""
+    
+    let multiplier = (10 ** (digitsArray.length - 1))
+    for (let i = 0; i < digitsArray.length; i++) {
+        obj[i] = digitsArray[i] * multiplier;
+        multiplier/= 10;
+    }
+
+
+    return obj;
+
+
+    // if (num < 4) {
+    //     for (let i = 0; i < num; i++) {
+    //         result += one;
+    //     }
+    // }
+};
+
+console.log(intToRoman(125));
