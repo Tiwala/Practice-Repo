@@ -3,7 +3,7 @@
 var isPalindrome = function(s) {
     // notes on .replace()
     // anything within the // is the regexp
-    // the brackets indicate character class; allows you to access the range between 0-9 and a-z
+    // the [brackets] indicate character class; allows you to access the range between 0-9 and a-z
     // ^ indicates what is NOT in the regexp
     // g is the global flag, allows you to refer to all occurrences of non-alphanumeric stuff and not just the first
     // i makes it case insensitive
