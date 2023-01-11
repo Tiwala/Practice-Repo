@@ -58,6 +58,35 @@
 // linkedList.print();
 
 
-let empty = "";
-let current = 'i'
-console.log(empty.concat(current));
+// let empty = "";
+// let current = 'i'
+// console.log(empty.concat(current));
+
+const Node = (val) => {
+    return {
+        val,
+        next: null,
+    }
+}
+
+const head =  Node(1);
+const nextNode = Node(2);
+const nextNode2 = Node(3)
+head.next = nextNode;
+nextNode.next = nextNode2;
+
+// how it looks
+// head = {val: 1, next: {val: 2, next: {val: 3, next: null}}}
+
+const linkedList = (head) => {
+    let curr = head;
+    while(curr) {
+        console.log(curr.val)
+        curr = curr.next;
+    }
+    return curr;
+}
+
+// console.log(head)
+
+console.log(head)

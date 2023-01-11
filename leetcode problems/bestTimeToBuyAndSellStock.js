@@ -1,5 +1,6 @@
 // only worry about the profit
 const maxProfit = (prices) => {
+    // record the lowest day and the max profit
     let lowest = prices[0];
     let profit = 0;
 
