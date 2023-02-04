@@ -1,5 +1,5 @@
 // All TypeScript does is TYPE SAFETY and STATIC CHECKING
-// It is NOT a new programming language
+// It is NOT REALLY a new programming language; it's a superset or wrap-around to write better JavaScript
 
 // Static checking = the syntax of the language is constantly being analyzed by IDEs
 // JavaScript doesn't do that, you only find out errors and shit after JS gets executed in browsers or node environment etc
@@ -26,3 +26,20 @@ let sum = numberOne + numberTwo; // will still return "33"
 // VSCode supports TypeScript but doesn't include TypeScript compiler, tsc.
 // You still have to install the TypeScript compiler via sudo npm install -g typescript
 // You also have to do sudo npm install -g ts-node
+
+// Types
+// Number, String, Boolean (PRIMITIVES)
+// Null, Undefined, Void
+// Object, Array, Tuples, etc
+// Any (makes it JavaScript-ish, known for not being used, if you don't wanna write long shit), Never, unknown
+// TypeScript is all about mastering all the types to separate them for TYPE SAFETY
+
+// TypeScript helps you out in figuring out what data is about to be processed
+
+// Using ANY is bad practice; turns off type checking, why are you even use TypeScript?
+// Declaring a variable without a value defaults it as any
+// noImplicitAny flags any implicit ANY as an error
+
+// RUNNING TYPESCRIPT
+// Instead of pressing the play button on the top right, do a tsc [filename]
+// It'll 
