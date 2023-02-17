@@ -90,31 +90,45 @@
 
 // console.log(fizzBuzz(15))
 
-function sortBinaryNumbers(bitArrays) {
-  // Write your code here
-  // Input is an array of arrays; indices are where the 1s are from the right;
-  // Goal is to return an array of indices in descending order of binary number value
+// function sortBinaryNumbers(bitArrays) {
+//   // Write your code here
+//   // Input is an array of arrays; indices are where the 1s are from the right;
+//   // Goal is to return an array of indices in descending order of binary number value
   
-  let storage = [];
-  let previousTotal = 0;
-  for (let i = 0; i < bitArrays.length; i++) {
-      let currentTotal = 0;
-      for (let j = 0; j < bitArrays[i].length; j++) {
-          currentTotal += bitArrays[i][j];
-      }
-      storage.push([currentTotal, i]);
-  }
-  storage.sort(function(a, b) {
-    return b[0] - a[0]
-  })
+//   let storage = [];
+//   let previousTotal = 0;
+//   for (let i = 0; i < bitArrays.length; i++) {
+//       let currentTotal = 0;
+//       for (let j = 0; j < bitArrays[i].length; j++) {
+//           currentTotal += bitArrays[i][j];
+//       }
+//       storage.push([currentTotal, i]);
+//   }
+//   storage.sort(function(a, b) {
+//     return b[0] - a[0]
+//   })
   
-  let result = [];
+//   let result = [];
 
-  for (let i = 0; i < storage.length; i++) {
-    result.push(storage[i][1]);
-  }
+//   for (let i = 0; i < storage.length; i++) {
+//     result.push(storage[i][1]);
+//   }
 
-  return result;
-}
+//   return result;
+// }
 
-console.log(sortBinaryNumbers([[1, 2], [0, 2], [2, 3]]))
+// console.log(sortBinaryNumbers([[1, 2], [0, 2], [2, 3]]))
+
+
+// var array = [{name: 'adames', main: 'incineroar'}, {}, {}]
+
+// var obj = {
+//   name: 'kovu',
+//   main: 'zelda'
+// }
+
+// function thing(arrayOfObjects, index, key) {
+//   return arrayOfObjects[index][key]
+// }
+
+// console.log(thing(array, 0, 'main')) 

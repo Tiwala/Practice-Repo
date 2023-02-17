@@ -13,3 +13,5 @@ var arrayPairSum = function(nums) {
     
     return sum;
 };
+
+console.log(arrayPairSum([1, 2, 3, 4, 5]))
