@@ -39,6 +39,15 @@ getDbId('3')
 
 // const data: number | string[] = [1, 2, 3, "4"] // this shit doesn't fly
 // const data: number[] | string[] = [1, 2, 3, "4"] // this shit doesn't fly either
+// const data: any[] = [1, 2, 3, "4"] // not good practice why are you even using TS
 const data: (number | string)[] = [1, 2, 3, "4"]
+
+// Strict values for variables
+// let pi: 3.14 = 3.14;
+// pi = 3.145 // not allowed
+
+let seatAllotment: "aisle" | "middle" | "window"
+seatAllotment = "aisle";
+// seatAllotment = "crew" // not allowed
 
 export {}
