@@ -1,24 +1,33 @@
 "use strict";
-// To implement TakePhoto, you have to create a constructor which has TakePhoto's properties
-class Instagram {
-    // if constructor is not there or doesn't contain interface properties, throws error
-    constructor(cameraMode, filter, burst) {
-        this.cameraMode = cameraMode;
-        this.filter = filter;
-        this.burst = burst;
-    }
-}
-class Youtube {
-    constructor(cameraMode, filter, burst, 
-    // you can create more properties but not less
-    short) {
-        this.cameraMode = cameraMode;
-        this.filter = filter;
-        this.burst = burst;
-        this.short = short;
-    }
-    // since this is a method, you don't put it in the constructor
-    createStory() {
-        console.log("Story was created");
-    }
-}
+// interface TakePhoto {
+//     cameraMode: string
+//     filter: string
+//     burst: number
+// }
+// // To implement TakePhoto, you have to create a constructor which has TakePhoto's properties
+// class Instagram implements TakePhoto {
+//     // if constructor is not there or doesn't contain interface properties, throws error
+//     constructor(
+//         public cameraMode: string,
+//         public filter: string,
+//         public burst: number
+//     ) {
+//     }
+// }
+// interface Story {
+//     createStory(): void
+// }
+// class Youtube implements TakePhoto, Story{
+//     constructor(
+//         public cameraMode: string,
+//         public filter: string,
+//         public burst: number,
+//         // you can create more properties but not less
+//         public short: string
+//     ) {
+//     }
+//     // since this is a method, you don't put it in the constructor
+//     createStory(): void {
+//         console.log("Story was created");
+//     }
+// }
