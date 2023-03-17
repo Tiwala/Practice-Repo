@@ -1,4 +1,5 @@
 // type narrowing
+// typeof
 function detectTypes(val: number | string) {
     // can't do this bc it COULD be a number
     // return val.toLowerCase()
@@ -11,6 +12,7 @@ function detectTypes(val: number | string) {
     return val + 3
 }
 
+// ! not operator checks for falsy values
 function provideId(id: string | null) {
     if (!id) {
         console.log('Please provide ID');
@@ -65,4 +67,45 @@ function isAdminAccount(account: User | Admin) {
     }
 
     return false;
+}
+
+// instanceof narrowing
+// instanceof checks if value contains an instance of some class or prototype
+// useful for most values that can be constructed with NEW
+// instanceof is also a type guard
+function logValue(x: Date | string) {
+    if (x instanceof Date) {
+        console.log(x.toUTCString());
+    }
+    else {
+        console.log(x.toUpperCase());
+    }
+}
+
+// Type Predicates
+// to use a user-defined typed guard,
+// define a function whose return type is a type predicate
+type Fish = {
+    swim: () => void;
+}
+type Bird = {
+    fly: () => void;
+}
+// pet is Fish typecasts it into particular type
+function isFish(pet: Fish | Bird): pet is Fish {
+    // pet is a Fish if it has a method of .swim and is not undefined
+    // returns true if pet is a Fish
+    return (pet as Fish).swim !== undefined
+}
+
+function getFood(pet: Fish | Bird) {
+    if (isFish(pet)) {
+        // this is truly a fish now bc of pet is Fish
+        // would have been unsure otherwise
+        pet
+        return "fish food"
+    } else {
+        pet
+        return "bird food"
+    }
 }
