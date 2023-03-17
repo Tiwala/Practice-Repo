@@ -109,3 +109,48 @@ function getFood(pet: Fish | Bird) {
         return "bird food"
     }
 }
+
+// Discriminative Union
+interface Circle {
+    kind: "circle",
+    radius: number
+}
+
+interface Square {
+    kind: "square",
+    side: number
+}
+
+interface Rectangle {
+    kind: "rectangle",
+    length: number,
+    width: number,
+}
+
+type Shape = Circle | Square | Rectangle
+
+function getTrueShape(shape: Shape) {
+    if (shape.kind === "circle") {
+        return Math.PI * shape.radius ** 2;
+    }
+    // return shape.side * shape.side;
+}
+
+// Exhaustive Check
+function getArea(shape: Shape) {
+    // just tried switch cases just because
+    switch(shape.kind) {
+        case "circle":
+            return Math.PI * shape.radius ** 2;
+        case "square":
+            return shape.side * shape.side;
+        case "rectangle":
+            return shape.length * shape.width;
+        // Exhaustiveness checking
+        // This is to show that you've exhausted all possibilities
+        // If there is anything else, it shouldn't exist
+        default:
+            const _defaultforshape: never = shape;
+            return _defaultforshape
+    }
+}
