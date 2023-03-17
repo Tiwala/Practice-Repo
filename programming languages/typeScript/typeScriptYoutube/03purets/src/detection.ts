@@ -43,4 +43,26 @@ function printAllBetter(strs: string | string[] | null) {
     } else if (typeof strs === "string") {
       console.log(strs);
     }
-  }
+}
+
+interface User {
+    name: string,
+    email: string
+}
+
+interface Admin {
+    name: string,
+    email: string,
+    isAdmin: boolean
+}
+
+// IN OPERATOR
+// checks if account interface is Admin
+function isAdminAccount(account: User | Admin) {
+    // immediately checks if property is inside the argument
+    if ("isAdmin" in account) {
+        return account.isAdmin;
+    }
+
+    return false;
+}
