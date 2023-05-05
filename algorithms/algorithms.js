@@ -115,37 +115,56 @@
 
 // console.log(lengthOfLongestSubstring('dvdf'));
 
-var intToRoman = function(num) {
-    const one = "I";
-    const five = "V";
-    const ten = "X";
-    const fifty = "L";
-    const hundred = "C";
-    const fiveHundred = "D";
-    const thousand = "M";
+// var intToRoman = function(num) {
+//     const one = "I";
+//     const five = "V";
+//     const ten = "X";
+//     const fifty = "L";
+//     const hundred = "C";
+//     const fiveHundred = "D";
+//     const thousand = "M";
     
-    let obj = {};
+//     let obj = {};
     
-    let array = num.toString().split('');
-    let digitsArray = array.map(num => Number(num));
+//     let array = num.toString().split('');
+//     let digitsArray = array.map(num => Number(num));
 
-    let result = ""
+//     let result = ""
     
-    let multiplier = (10 ** (digitsArray.length - 1))
-    for (let i = 0; i < digitsArray.length; i++) {
-        obj[i] = digitsArray[i] * multiplier;
-        multiplier/= 10;
+//     let multiplier = (10 ** (digitsArray.length - 1))
+//     for (let i = 0; i < digitsArray.length; i++) {
+//         obj[i] = digitsArray[i] * multiplier;
+//         multiplier/= 10;
+//     }
+
+
+//     return obj;
+
+
+//     // if (num < 4) {
+//     //     for (let i = 0; i < num; i++) {
+//     //         result += one;
+//     //     }
+//     // }
+// };
+
+// console.log(intToRoman(125));
+
+function diagonalDifference(arr) {
+    // Write your code here
+    let lToR = 0;
+    for (let i = 0; i < arr.length; i++) {
+        lToR+= arr[i][i];
     }
 
+    let rToL = 0;
+    let index = arr.length - 1;
+    for (let j = 0; j < arr.length; j++) {
+        rToL+= arr[j][index]
+        index--
+    }
+    
+    return Math.abs(lToR - rToL)
+}
 
-    return obj;
-
-
-    // if (num < 4) {
-    //     for (let i = 0; i < num; i++) {
-    //         result += one;
-    //     }
-    // }
-};
-
-console.log(intToRoman(125));
+console.log(diagonalDifference([[ 11, 2, 4 ], [ 4, 5, 6 ], [ 10, 8, -12 ]]))
