@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Grades",
+            "request": "launch",
+            "mainClass": "Grades",
+            "projectName": "section 2_bd495c8d"
+        },
+        {
+            "type": "java",
+            "name": "JoiningStrings",
+            "request": "launch",
+            "mainClass": "JoiningStrings",
+            "projectName": "section 2_bd495c8d"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"

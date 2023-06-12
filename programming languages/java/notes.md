@@ -17,8 +17,8 @@ ALWAYS COMPILE YOUR CODE FIRST
 int = whole numbers (from -2,147,483,648 to 2,147,483,648)
 long = big whole numbers (from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,808)
 double = decimals (15 significant digits)
-String = text
-char = single character
+String = text, use double quotes
+char = single character, use single quotes
 
 **Golden Rule**
 - Use the smallest amount of memory possible.
