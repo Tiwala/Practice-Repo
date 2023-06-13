@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MathOperations",
+            "request": "launch",
+            "mainClass": "MathOperations",
+            "projectName": "section 2_bd495c8d"
+        },
+        {
+            "type": "java",
+            "name": "Decimals",
+            "request": "launch",
+            "mainClass": "Decimals",
+            "projectName": "section 2_bd495c8d"
+        },
+        {
+            "type": "java",
+            "name": "WholeNumbers",
+            "request": "launch",
+            "mainClass": "WholeNumbers",
+            "projectName": "section 2_bd495c8d"
+        },
+        {
+            "type": "java",
             "name": "Grades",
             "request": "launch",
             "mainClass": "Grades",

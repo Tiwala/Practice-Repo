@@ -6,7 +6,7 @@ public class Variables {
         int busTickets = passengers;
         System.out.println(busTickets);
 
-        int maxValue = 2147483647;
+        // int maxValue = 2147483647;
 
     }
 }
