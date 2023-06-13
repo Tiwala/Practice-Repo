@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "NextLineTrap",
+            "request": "launch",
+            "mainClass": "NextLineTrap",
+            "projectName": "section 2_bd495c8d"
+        },
+        {
+            "type": "java",
+            "name": "Debugging",
+            "request": "launch",
+            "mainClass": "Debugging",
+            "projectName": "section 2_bd495c8d"
+        },
+        {
+            "type": "java",
+            "name": "Survey",
+            "request": "launch",
+            "mainClass": "Survey",
+            "projectName": "section 2_bd495c8d"
+        },
+        {
+            "type": "java",
+            "name": "TypeConversion",
+            "request": "launch",
+            "mainClass": "TypeConversion",
+            "projectName": "section 2_bd495c8d"
+        },
+        {
+            "type": "java",
             "name": "MathOperations",
             "request": "launch",
             "mainClass": "MathOperations",
